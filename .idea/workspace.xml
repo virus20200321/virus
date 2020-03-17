@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08feb08a-d191-4a8e-9cf2-ddadd8e205d2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.13.6/libexec" />
+  <component name="ProjectId" id="1XkqrsqQM0pFM6vUqaOtT5Khmuk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RunManager" selected="Go Test.Test_findDuplicate in leetcode213/problems">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="leetcode213" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestGcd in leetcode213/problems" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/problems" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="leetcode213/problems" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestGcd$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_findDuplicate in leetcode213/problems" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/../vip-community/problems" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="leetcode213/problems" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_findDuplicate$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_findRotate in leetcode213/problems" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/../vip-community/problems" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="leetcode213/problems" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_findRotate$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_longestPalindrome in leetcode213/problems" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/problems" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="leetcode213/problems" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_longestPalindrome$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test_search in leetcode213/problems" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/../vip-community/problems" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="leetcode213/problems" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^Test_search$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="vip-community" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="leetcode213" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.Test_findDuplicate in leetcode213/problems" />
+        <item itemvalue="Go Test.Test_search in leetcode213/problems" />
+        <item itemvalue="Go Test.Test_findRotate in leetcode213/problems" />
+        <item itemvalue="Go Test.Test_longestPalindrome in leetcode213/problems" />
+        <item itemvalue="Go Test.TestGcd in leetcode213/problems" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-2140" y="127" key="#Go_Modules_(vgo)" timestamp="1582271460800">
+      <screen x="-2560" y="23" width="2560" height="1053" />
+    </state>
+    <state x="-2140" y="127" key="#Go_Modules_(vgo)/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1582271460800" />
+    <state x="-1981" y="349" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582271423317">
+      <screen x="-2560" y="23" width="2560" height="1053" />
+    </state>
+    <state x="-1981" y="349" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1582271423317" />
+    <state x="374" y="244" key="EditFileWatcherDialog" timestamp="1581774421728">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state x="374" y="244" key="EditFileWatcherDialog/0.23.1440.873@0.23.1440.873" timestamp="1581774421728" />
+    <state width="1398" height="110" key="GridCell.Tab.0.bottom" timestamp="1584067270136">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.23.1440.873/1440.-31.1920.1057@1440.-31.1920.1057" timestamp="1583748727818" />
+    <state width="1398" height="110" key="GridCell.Tab.0.bottom/0.23.1440.873@0.23.1440.873" timestamp="1584067270136" />
+    <state width="2518" height="288" key="GridCell.Tab.0.bottom/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1581648880603" />
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.23.1440.877/-2560.23.2560.1053@0.23.1440.877" timestamp="1581928538627" />
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.23.1440.877/1440.-31.1920.1053@1440.-31.1920.1053" timestamp="1583748019865" />
+    <state width="1398" height="140" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1581735837882" />
+    <state width="1398" height="110" key="GridCell.Tab.0.center" timestamp="1584067270136">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.center/0.23.1440.873/1440.-31.1920.1057@1440.-31.1920.1057" timestamp="1583748727817" />
+    <state width="1398" height="110" key="GridCell.Tab.0.center/0.23.1440.873@0.23.1440.873" timestamp="1584067270136" />
+    <state width="2518" height="288" key="GridCell.Tab.0.center/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1581648880602" />
+    <state width="1398" height="211" key="GridCell.Tab.0.center/0.23.1440.877/-2560.23.2560.1053@0.23.1440.877" timestamp="1581928538626" />
+    <state width="1398" height="211" key="GridCell.Tab.0.center/0.23.1440.877/1440.-31.1920.1053@1440.-31.1920.1053" timestamp="1583748019865" />
+    <state width="1398" height="140" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1581735837880" />
+    <state width="1398" height="110" key="GridCell.Tab.0.left" timestamp="1584067270135">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.left/0.23.1440.873/1440.-31.1920.1057@1440.-31.1920.1057" timestamp="1583748727816" />
+    <state width="1398" height="110" key="GridCell.Tab.0.left/0.23.1440.873@0.23.1440.873" timestamp="1584067270135" />
+    <state width="2518" height="288" key="GridCell.Tab.0.left/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1581648880602" />
+    <state width="1398" height="211" key="GridCell.Tab.0.left/0.23.1440.877/-2560.23.2560.1053@0.23.1440.877" timestamp="1581928538624" />
+    <state width="1398" height="211" key="GridCell.Tab.0.left/0.23.1440.877/1440.-31.1920.1053@1440.-31.1920.1053" timestamp="1583748019864" />
+    <state width="1398" height="140" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1581735837879" />
+    <state width="1398" height="110" key="GridCell.Tab.0.right" timestamp="1584067270136">
+      <screen x="0" y="23" width="1440" height="873" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.right/0.23.1440.873/1440.-31.1920.1057@1440.-31.1920.1057" timestamp="1583748727818" />
+    <state width="1398" height="110" key="GridCell.Tab.0.right/0.23.1440.873@0.23.1440.873" timestamp="1584067270136" />
+    <state width="2518" height="288" key="GridCell.Tab.0.right/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1581648880603" />
+    <state width="1398" height="211" key="GridCell.Tab.0.right/0.23.1440.877/-2560.23.2560.1053@0.23.1440.877" timestamp="1581928538626" />
+    <state width="1398" height="211" key="GridCell.Tab.0.right/0.23.1440.877/1440.-31.1920.1053@1440.-31.1920.1053" timestamp="1583748019865" />
+    <state width="1398" height="140" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1581735837881" />
+    <state x="229" y="98" key="SettingsEditor" timestamp="1582272514259">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="229" y="98" key="SettingsEditor/0.23.1440.873@0.23.1440.873" timestamp="1581774422801" />
+    <state x="229" y="98" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1582272514259" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1581603036824">
+      <screen x="-2560" y="23" width="2560" height="1053" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.877/-2560.23.2560.1053@-2560.23.2560.1053" timestamp="1581603036824" />
+  </component>
+</project>
