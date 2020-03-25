@@ -62,34 +62,91 @@ func maxPoints(points [][]int) int {
 	return retMax
 }
 
-
 func longestPalindrome(s string) string {
 	l := len(s)
-	if l < 2{
+	if l < 2 {
 		return s
 	}
 	max := 1
 	ret := s[0:1]
-	dp := make([][]bool,l)
-	for i, _ := range dp{
-		dp[i] = make([]bool,l)
+	dp := make([][]bool, l)
+	for i, _ := range dp {
+		dp[i] = make([]bool, l)
 	}
 
-
-	for r := 1; r < l; r++{ //!! 保证 dp[r-1][l+1] 有值
-		for l := 0; l < r; l++{
-			if r - l < 3{ //!! <=3 就是4个值了
+	for r := 1; r < l; r++ { //!! 保证 dp[r-1][l+1] 有值
+		for l := 0; l < r; l++ {
+			if r-l < 3 { //!! <=3 就是4个值了
 				dp[r][l] = s[r] == s[l]
-			}else {
+			} else {
 				dp[r][l] = dp[r-1][l+1] && s[r] == s[l]
 			}
-			if dp[r][l]{
-				if r - l + 1 > max{
-					max = r-l+1
-					ret = s[l:r+1]
+			if dp[r][l] {
+				if r-l+1 > max {
+					max = r - l + 1
+					ret = s[l : r+1]
 				}
 			}
 		}
 	}
 	return ret
+}
+
+func search(nums []int, target int) int {
+	rotate := findRotateIndex(nums)
+	if rotate == -1 {
+		return binarySearch(nums, target)
+	}
+	i := -1
+	if nums[rotate] == target {
+		return rotate
+	} else if target >= nums[0] {
+		fmt.Println("search in", nums[:rotate])
+		i = binarySearch(nums[:rotate], target)
+
+	} else {
+		fmt.Println("search in", nums[rotate:])
+
+		i = binarySearch(nums[rotate:], target)
+		if i != -1 {
+			i = rotate + i
+		}
+	}
+
+	return i
+
+}
+
+func binarySearch(nums []int, t int) int {
+	left, right := 0, len(nums)-1
+	for left <= right {
+		p := (left + right) / 2
+		if nums[p] == t {
+			return p
+		} else if nums[p] > t {
+			right = p - 1
+		} else {
+			left = p + 1
+		}
+
+	}
+	return -1
+}
+
+func findRotateIndex(nums []int) int {
+	left, right := 0, len(nums)-1
+	for left < right {
+		p := (left + right) / 2
+		if nums[p] > nums[p+1] {
+			return p + 1
+		}
+		if nums[p] > nums[left] {
+			//TODO is this ok? it is !
+			left = p + 1
+		} else {
+			right = p
+		}
+
+	}
+	return -1
 }
