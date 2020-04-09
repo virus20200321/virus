@@ -1,12 +1,22 @@
 package producer
 
 import (
+	"context"
 	"github.com/segmentio/kafka-go"
 	"time"
 )
 
 type Producer struct {
 	Conn *kafka.Conn
+}
+
+func MustNewProducer2(addr string, topic string) *Producer {
+	conn, e := kafka.DialLeader(context.Background(), "tcp", addr, topic, 0)
+	if e != nil {
+		panic(e)
+	}
+	conn.SetReadDeadline(time.Now().Add(10 * time.Second))
+	return &Producer{Conn: conn}
 }
 
 //"10.13.58.111:9092"
