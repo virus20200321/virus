@@ -2,7 +2,6 @@ package producer
 
 import (
 	"github.com/segmentio/kafka-go"
-	"log"
 	"time"
 )
 
@@ -10,8 +9,9 @@ type Producer struct {
 	Conn *kafka.Conn
 }
 
-func MustNewProducer(topic string, numPartition int) *Producer {
-	producer, e := kafka.DefaultDialer.Dial("tcp", "10.13.58.111:9092")
+//"10.13.58.111:9092"
+func MustNewProducer(addr string, topic string, numPartition int) *Producer {
+	producer, e := kafka.DefaultDialer.Dial("tcp", addr)
 	if e != nil {
 		panic(e)
 	}
