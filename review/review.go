@@ -1,35 +1,16 @@
 package review
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
-
-func reverseList(head *ListNode) *ListNode {
-
-	if head == nil || head.Next == nil {
-		return head
+func removeDuplicates(nums []int) int {
+	if len(nums) <= 1 {
+		return len(nums)
 	}
-
-	cur := reverseList(head.Next)
-	head.Next.Next = head
-	head.Next = nil
-	return cur
-
-}
-
-func reverseList2(head *ListNode) *ListNode {
-	prev := head
-	if prev == nil || prev.Next == nil {
-		return prev
+	dup := 0
+	for i := 1; i < len(nums); i++ {
+		if nums[i] == nums[i-1] {
+			dup++
+		} else {
+			nums[i-dup] = nums[i]
+		}
 	}
-	cur := prev.Next
-	for cur != nil {
-		next := cur.Next
-		cur.Next = prev
-		prev.Next = nil
-		prev = cur
-		cur = next
-	}
-	return prev
+	return len(nums) - dup
 }
