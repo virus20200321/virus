@@ -56,3 +56,38 @@ func reverseBetween(head *ListNode, m int, n int) *ListNode {
 	head.Next = newNext
 	return head
 }
+
+func reverseList0422(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	cur := reverseList0422(head.Next)
+	head.Next.Next = head
+	head.Next = nil
+	return cur
+}
+
+var theEnd *ListNode = nil
+
+//1,2,3,4  1,3,2,4
+/* This function reverse N times*/
+func reverseHelper0422(head *ListNode, n int) *ListNode {
+	if n == 0 {
+		return head
+	}
+
+	newHead := reverseHelper0422(head.Next, n-1)
+	head.Next.Next = head
+	head.Next = theEnd
+	return newHead
+}
+func reverseBetween0422(head *ListNode, m, n int) *ListNode {
+	if m == 1 { // e.g. n=4, m = 2 ; m=1,n=3
+		newHead := reverseHelper0422(head, n-1)
+		return newHead
+	}
+
+	cur := reverseBetween0422(head.Next, m-1, n-1)
+	head.Next = cur
+	return head
+}
