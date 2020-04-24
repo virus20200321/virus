@@ -24,5 +24,5 @@ func CanLu() (msg string, can bool) {
 	} else {
 		CanLuFailure = 0
 	}
-	return fmt.Sprintf("current result: %0.2f\nfailure times: %1.0f", num, CanLuFailure), ok
+	return fmt.Sprintf("current result: %t %0.2f\nfailure times: %1.0f", ok, num, CanLuFailure), ok
 }
