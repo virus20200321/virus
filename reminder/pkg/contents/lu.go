@@ -1,6 +1,7 @@
 package contents
 
 import (
+	"fmt"
 	"leetcode213/reminder/pkg/macros"
 	"math/rand"
 	"time"
@@ -15,6 +16,13 @@ func CanLu() (msg string, can bool) {
 		curProbability = macros.MaxProbability
 	}
 	rand.Seed(time.Now().UnixNano())
-	rand.Float64()
-	return "", false
+
+	num := rand.Float64()
+	ok := num <= curProbability
+	if !ok {
+		CanLuFailure++
+	} else {
+		CanLuFailure = 0
+	}
+	return fmt.Sprintf("current result: %0.2f\nfailure times: %1.0f", num, CanLuFailure), ok
 }
