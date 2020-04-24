@@ -11,7 +11,7 @@ type Box struct {
 func (b *Box) SendMail(body string) {
 	from := "bettercallssx@gmail.com"
 	to := "bettercallssx@163.com"
-	pass := "89869551ssx"
+	pass := "..."
 	msg := "From: " + from + "\n" +
 		"To: " + to + "\n" +
 		"Subject: Hello there\n\n" +
