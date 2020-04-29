@@ -1,61 +1,55 @@
 package problems
 
-func search(nums []int, target int) int {
-	len := len(nums)
-	var l, r = 0, len - 1
-	if len == 0 {
-		return -1
-	}
-	if len == 1 {
-		if nums[0] == target {
-			return 0
+import "fmt"
+
+func getIndex(nums []int) int {
+	l, r := 0, len(nums)-1
+	for l < r {
+		mid := (l + r) / 2
+		if nums[mid] > nums[mid+1] {
+			return mid + 1
 		}
-		return -1
-	}
-	i := findRotateIndex(nums)
-	if i == -1 {
-		l, r = 0, len-1
-	} else {
-		if target > nums[0] {
-			r = i - 1
-		} else if target < nums[0] {
-			l = i
+		if nums[mid] > nums[l] {
+			l = mid
 		} else {
-			return 0
+			r = mid
 		}
-	}
-
-	//fmt.Println("search range:", l, r)
-	return binarySearch(nums, target, l, r)
-}
-
-func binarySearch(nums []int, target int, l, r int) int {
-	if l > r {
-		return -1
-	}
-	p := (l + r) / 2
-	if nums[p] == target {
-		return p
-	} else if nums[p] > target {
-		return binarySearch(nums, target, l, p-1)
-	} else {
-		return binarySearch(nums, target, p+1, r)
-
-	}
-}
-func findRotateIndex(nums []int) int {
-	var left, right = 0, len(nums) - 1
-	for left < right {
-		p := (left + right) / 2
-		if nums[p] > nums[p+1] {
-			return p + 1
-		}
-		if nums[p] > nums[left] {
-			left = p
-		} else {
-			right = p
-		}
-
 	}
 	return -1
+}
+
+func bSearch(nums []int, t int) int {
+	l, r := 0, len(nums)-1
+	fmt.Println("search from", l, " - ", r, nums)
+	for l <= r {
+		mid := (l + r) / 2
+		fmt.Println("mid=", mid, nums[mid])
+		if nums[mid] == t {
+			return mid
+		} else if nums[mid] > t {
+			r = mid - 1
+		} else {
+			l = mid + 1
+		}
+	}
+	return -1
+}
+
+func search(nums []int, target int) int {
+	pivot := getIndex(nums)
+	fmt.Println("pivot=", pivot)
+	if pivot == -1 {
+		return bSearch(nums, target)
+	} else if nums[pivot] == target {
+		return pivot
+	}
+
+	if target >= nums[0] {
+		return bSearch(nums[:pivot], target)
+	} else {
+		if ret := bSearch(nums[pivot:], target); ret != -1 {
+			return pivot + ret
+		}
+		return -1
+	}
 }
