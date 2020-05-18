@@ -25,3 +25,29 @@ func findDuplicate(nums []int) int {
 	}
 	return l
 }
+
+func findDuplicate2(nums []int) int {
+	//nums range 1~n len = n+1
+	//sorted range 1~n len = n
+
+	if len(nums) <= 2 {
+		return nums[0]
+	}
+	l, r := 1, len(nums)-1
+
+	for l <= r {
+		cnt := 0
+		mid := (l + r) / 2
+		for i := 0; i < len(nums); i++ {
+			if nums[i] <= mid {
+				cnt++
+			}
+		}
+		if cnt > len(nums)/2 {
+			l = mid + 1
+		} else {
+			r = mid
+		}
+	}
+	return l
+}
