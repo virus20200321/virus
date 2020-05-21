@@ -12,3 +12,14 @@ func singleNumber(nums []int) int {
 	}
 	return nums[len(nums)-1]
 }
+
+func singleNumber2(nums []int) int {
+	if len(nums) == 1 {
+		return nums[0]
+	}
+	for i := 1; i < len(nums); i++ {
+		nums[i] = nums[i-1] ^ nums[i]
+
+	}
+	return nums[len(nums)-1]
+}
