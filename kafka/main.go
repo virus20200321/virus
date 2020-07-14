@@ -1,22 +1,27 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	producer2 "leetcode213/kafka/producer"
+	"gopkg.in/alecthomas/kingpin.v2"
 	"os"
+
+	producer2 "leetcode213/kafka/producer"
+)
+
+var (
+	app         = kingpin.New("widget", "widget tool")
+	producerCmd = app.Command("producer", "producer")
+	addr        = producerCmd.Arg("addr", "address").Required().String()
+	//consumer
+	consumer = app.Command("consumer", "consumer")
 )
 
 func main() {
-	producer := producer2.MustNewProducer2(os.Args[1], "honey")
+	switch kingpin.MustParse(app.Parse(os.Args[1:])) {
+	case producerCmd.FullCommand():
+		fmt.Println("server address:", *addr)
+		producer2.RunWriter(*addr)
 
-	for {
-		reader := bufio.NewReader(os.Stdin)
-		fmt.Print("Enter text: ")
-		text, _ := reader.ReadString('\n')
-		i, e := producer.SendMsg(text)
-		if i == 0 || e != nil {
-			panic(e)
-		}
 	}
+
 }
