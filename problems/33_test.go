@@ -5,6 +5,7 @@ import (
 	"testing"
 )
 
+/*
 func Test_findRotate(t *testing.T) {
 	i := findRotateIndex([]int{5, 6, 7, 8, 1, 2, 3})
 	fmt.Println("rotate index = ", i)
@@ -14,7 +15,7 @@ func Test_findRotate(t *testing.T) {
 	fmt.Println("rotate index = ", i)
 
 }
-
+*/
 func Test_search(t *testing.T) {
 	i := search([]int{4, 5, 6, 7, 0, 1, 2}, 0)
 	fmt.Println("result index = ", i)
