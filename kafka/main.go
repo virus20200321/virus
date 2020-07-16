@@ -1,11 +1,12 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"gopkg.in/alecthomas/kingpin.v2"
-	"os"
-
+	consumer2 "leetcode213/kafka/consumer"
 	producer2 "leetcode213/kafka/producer"
+	"os"
 )
 
 var (
@@ -14,6 +15,9 @@ var (
 	addr        = producerCmd.Arg("addr", "address").Required().String()
 	//consumer
 	consumer = app.Command("consumer", "consumer")
+	addr2    = consumer.Arg("addr", "address").Required().String()
+	groupID  = consumer.Arg("group", "group").Required().String()
+	topic    = consumer.Arg("topic", "topic").Required().String()
 )
 
 func main() {
@@ -21,7 +25,8 @@ func main() {
 	case producerCmd.FullCommand():
 		fmt.Println("server address:", *addr)
 		producer2.RunWriter(*addr)
-
+	case consumer.FullCommand():
+		consumer2.RunReader(context.Background(), *addr2, *groupID, *topic)
 	}
 
 }
