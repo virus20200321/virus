@@ -36,6 +36,7 @@ func MustNewProducer(addr string, topic string, numPartition int) *Producer {
 		ReplicaAssignments: nil,
 		ConfigEntries:      nil,
 	})
+
 	if e != nil {
 		panic(e)
 	}
