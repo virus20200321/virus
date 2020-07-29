@@ -16,12 +16,17 @@ func RunReader(ctx context.Context, addr string, groupID string, topic string) {
 		CommitInterval: time.Second,
 	})
 	for {
-		m, err := r.ReadMessage(ctx)
+		m, err := r.FetchMessage(ctx)
 		if err != nil {
 			break
 		}
 		color.Green("message at topic/partition/offset %v/%v/%v: %s = %s\n",
 			m.Topic, m.Partition, m.Offset, string(m.Key), string(m.Value))
+
+		err = r.CommitMessages(ctx, m)
+		if err != nil {
+			break
+		}
 	}
 	e := r.Close()
 	color.Yellow("reader close error %v", e)

@@ -6,10 +6,10 @@ import (
 	"github.com/segmentio/kafka-go"
 )
 
-func RunWriter(addr string) {
+func RunWriter(topic string, addr string) {
 	w := kafka.NewWriter(kafka.WriterConfig{
 		Brokers:  []string{addr},
-		Topic:    "topic-A",
+		Topic:    topic,
 		Balancer: &kafka.Hash{},
 	})
 
@@ -25,6 +25,10 @@ func RunWriter(addr string) {
 		kafka.Message{
 			Key:   []byte("Key-C"),
 			Value: []byte("Two!"),
+		},
+		kafka.Message{
+			Key:   []byte("Key-A"),
+			Value: []byte("666"),
 		},
 	)
 	color.Yellow("writer writes error: %v", e)
