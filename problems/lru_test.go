@@ -1,27 +1,25 @@
 package problems
 
 import (
-	"github.com/sirupsen/logrus"
-	"github.com/spf13/cast"
+	"github.com/fatih/color"
 	"testing"
 )
 
 func TestLruCache(t *testing.T) {
-	logrus.SetLevel(logrus.DebugLevel)
 
-	lru := NewLruCache(5)
-	for i := 0; i < 5; i++ {
+	lruCache := Constructor(2)
+	r := lruCache.Get(1)
+	color.Yellow("r=%d lruCache: %s", r, &lruCache)
 
-		lru.Push(cast.ToString(i), cast.ToString(i))
-	}
-	lru.Print()
+	lruCache.Put(1, 1)
+	color.Yellow("r=%d lruCache: %s", r, &lruCache)
+	lruCache.Put(3, 3)
+	color.Yellow("r=%d lruCache: %s", r, &lruCache)
 
-	// get
-	lru.Get("2")
-	lru.Print()
+	lruCache.Put(6, 6)
+	color.Yellow("r=%d lruCache: %s", r, &lruCache)
 
-	// push when list is full
-	lru.Push("6", "6")
-	lru.Print()
+	r = lruCache.Get(3)
+	color.Yellow("r=%d lruCache: %s", r, &lruCache)
 
 }
